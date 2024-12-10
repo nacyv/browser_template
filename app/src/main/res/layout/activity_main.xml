@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:background="#FFFFFF"
+             android:padding="8dp"
+             android:orientation="horizontal">
+
+            <ImageView
+                 android:layout_height="32dp"
+                 android:layout_width="32dp"
+                 android:src="@drawable/favicon_default"
+                 android:scaleType="fitCenter"
+                 android:layout_marginRight="8dp"
+                 android:id="@+id/favicon" />
+
+            <EditText
+                 android:layout_height="32dp"
+                 android:layout_width="0dp"
+                 android:imeOptions="actionSearch"
+                 android:background="@drawable/input_url_background"
+                 android:hint="search"
+                 android:padding="6dp"
+                 android:layout_weight="1"
+                 android:inputType="textUri|text"
+                 android:id="@+id/inputUrl" />
+
+        </LinearLayout>
+
+        <ProgressBar
+             android:layout_height="4dp"
+             android:layout_width="match_parent"
+             android:max="100"
+             android:background="#BBBBBB"
+             android:outlineSpotShadowColor="#00000000"
+             android:progressTint="#0088FF"
+             android:outlineAmbientShadowColor="#00000000"
+             style="@android:style/Widget.ProgressBar.Horizontal"
+             android:id="@+id/progressBar" />
+
+        <android.webkit.WebView
+             android:layout_height="0dp"
+             android:layout_width="match_parent"
+             android:layout_weight="1"
+             android:id="@+id/webview">
+
+        </android.webkit.WebView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
